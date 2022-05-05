@@ -17,4 +17,4 @@ I used the azure CLi loccally because the azure cloud CLi required a subscriptio
 6. lastly, i updated packages and installed the web server: `sudo apt-get -y update` and
    `sudo apt-get -y install nginx`
 
-Look in the 'screenshots' folder for photos of some of the steps i took and the final web server.
+Look in the 'solution_screenshots' folder for photos of some of the steps i took and the final web server.
