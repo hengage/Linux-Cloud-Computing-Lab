@@ -26,7 +26,7 @@ gcloud + release level (optional) + component + entity + operation + positional 
 gcloud compute instances create <instance_name> --zone=<zone>
 
 ## Running commands
-###Get the gcloud help information.
+*#Get the gcloud help information.* \\
 gcloud help
 ###Get the gcloud cheat sheet.
 gcloud cheat-sheet
@@ -127,13 +127,15 @@ gcloud beta compute ssh web-instance-01
 ###Verify that the Apache HTTP Server service is active (running). 
 systemctl status apache2.service
 
-###Verify the custom index.html file. 
+*#Verify the custom index.html file.*
 cat /var/www/html/index.html
 
 ###Close the SSH connection.
+
 exit
 
 ###Add the external IP from the instance to a variable, add the HTTP protocol, and echo the result.
+
 HTTP_ADDRESS=$(gcloud compute instances describe web-instance-01 --format="value(networkInterfaces[0].accessConfigs[0].natIP)")
 HTTP_ADDRESS="http://""$HTTP_ADDRESS"
 echo $HTTP_ADDRESS
