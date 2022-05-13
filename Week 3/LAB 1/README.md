@@ -27,18 +27,26 @@ gcloud compute instances create <instance_name> --zone=<zone>
 
 ## Running commands
 *#Get the gcloud help information.* \\
+
 gcloud help
-###Get the gcloud cheat sheet.
+
+*#Get the gcloud cheat sheet.*
+
 gcloud cheat-sheet
-###Get projects help information.
+
+*#Get projects help information.*
+
 gcloud projects --help
-###Get projects create help information. 
+
+*#Get projects create help information.*
+
 gcloud projects create --help
 
-Create a new project and set as default. 
+*#Create a new project and set as default.* 
+
 gcloud projects create <project_id> --name=<project_name> --set-as-default
 
-###List the available billing accounts.
+*#List the available billing accounts.*
 gcloud beta billing accounts list
 
 ###Link a billing account with the project. 
