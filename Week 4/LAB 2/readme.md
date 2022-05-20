@@ -13,6 +13,8 @@ Launch an instance with the following property
 
 
 Hint: Associate an elastic ip with this instance, you will need it in later lab.
+
+
 Grading tip:  Screenshot major cli output and upload with your step by step answer (AWS describe command can help)
 
 
