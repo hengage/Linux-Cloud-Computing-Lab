@@ -16,7 +16,7 @@
 
     - Then I created a custom route table for my VPC: `aws ec2 create-route-table --vpc-id vpc-04e985bd1d514ee72 --query RouteTable.RouteTableId --output text` 
 
-    - After that I created a route in the route table that points all traffic (0.0.0.0/0) to the internet gateway: `aws ec2 describe-route-tables --route-table-id rtb-c1c8faa6`
+    - After that I created a route in the route table that points all traffic (0.0.0.0/0) to the internet gateway: `aws ec2 create-route --route-table-idrtb-048077a35e78b677d --destination-cidr-block 0.0.0.0/0 --gateway-id igw-03f8cabae5af99322`
 
     - Next, I associated my route table with both my subnets To this, first I get the ID of my subnets with the command: `aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-04e985bd1d514ee72" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"`
 
