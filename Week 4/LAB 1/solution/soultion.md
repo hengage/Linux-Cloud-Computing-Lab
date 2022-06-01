@@ -18,7 +18,5 @@
 
     - After that I created a route in the route table that points all traffic (0.0.0.0/0) to the internet gateway: `aws ec2 create-route --route-table-idrtb-048077a35e78b677d --destination-cidr-block 0.0.0.0/0 --gateway-id igw-03f8cabae5af99322`
 
-    - Next, I associated my route table with both my subnets To this, first I get the ID of my subnets with the command: `aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-04e985bd1d514ee72" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"`
-
-    With the next command, I finnaly associated my route table with one of my subnets: `aws ec2 associate-route-table  --subnet-id subnet-096f957e4e817eec4 --route-table-id rtb-048077a35e78b677d`
+    - Next, I associated my route table with both my subnets To this, first I get the ID of my subnets with the command: `aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-04e985bd1d514ee72" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"`. With the next command, I finnaly associated my route table with one of my subnets: `aws ec2 associate-route-table  --subnet-id subnet-096f957e4e817eec4 --route-table-id rtb-048077a35e78b677d`
     
